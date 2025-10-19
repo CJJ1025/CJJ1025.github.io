@@ -1,0 +1,47 @@
+/* 马卡龙幻彩模糊渐变背景 */
+body:not(.home-page) {  
+  background: linear-gradient(125deg, #ffcccc 0%, #ffccff 20%, #ccccff 40%, #ccffff 60%, #ccffcc 80%, #ffffcc 100%);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+/* 添加模糊效果 */
+body:not(.home-page)::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(8px);
+  z-index: -1;
+  transform: scale(1.05);
+}
+
+/* 渐变动画 */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 为首页添加标识类 */
+.home-page {
+  --home-page: true;
+}
+
+/* 首页header样式调整，确保Bing背景图显示正常 */
+.home-page #page-header {
+  background: transparent !important;
+}
+
+.home-page #page-header::before {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
