@@ -15,3 +15,16 @@ CDN:
 # 注意：Butterfly 5.x 用 search.use 指定搜索方式（旧版的 local_search.enable 已废弃）
 search:
   use: local_search
+
+# ===== 侧边栏 | Sidebar =====
+aside:
+  card_author:
+    enable: true
+    # 头像：把图片放进 source/img/ 后填 /img/xxx.jpg；留空则用主题默认蝴蝶图标
+    # avatar: /img/avatar.jpg
+    description: CJJ的个人博客，分享技术分析和生活记录
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/CJJ1025 # 你的 GitHub 主页
