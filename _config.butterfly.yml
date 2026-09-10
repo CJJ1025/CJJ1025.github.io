@@ -1,0 +1,11 @@
+# Butterfly 主题用户配置（会覆盖主题默认配置）
+# 完整配置项见：node_modules/hexo-theme-butterfly/_config.yml
+# 官方文档：https://butterfly.js.org/
+
+# ===== CDN 加速（国内访问优化）=====
+# 主题默认第三方库走 jsdelivr，国内不稳定，改为七牛 staticfile CDN
+CDN:
+  internal_provider: local
+  third_party_provider: custom
+  version: true
+  custom_format: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
