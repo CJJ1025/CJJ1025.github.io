@@ -9,3 +9,9 @@ CDN:
   third_party_provider: custom
   version: true
   custom_format: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
+
+# ===== 本地搜索 =====
+# 依赖 hexo-generator-search（已安装），搜索索引在构建时生成为 /search.xml
+# 注意：Butterfly 5.x 用 search.use 指定搜索方式（旧版的 local_search.enable 已废弃）
+search:
+  use: local_search

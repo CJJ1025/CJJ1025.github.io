@@ -9,7 +9,7 @@ description: CJJ的个人博客，分享技术分析和生活记录
 keywords: CJJ,个人博客,技术分析,生活记录
 author: CJJ
 language: zh-CN
-timezone: Asia/Shanghai
+timezone: Asia/Shanghai 
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
