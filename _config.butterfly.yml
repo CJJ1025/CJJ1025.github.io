@@ -2,6 +2,14 @@
 # 完整配置项见：node_modules/hexo-theme-butterfly/_config.yml
 # 官方文档：https://butterfly.js.org/
 
+# ===== 头像与顶部横幅 | Avatar & Banner =====
+avatar:
+  img: /img/avatar.jpg
+  effect: false
+
+# 首页顶部横幅（#page-header 背景），随机二次元图 API，每次刷新换一张
+index_img: https://www.loliapi.com/acg/
+
 # ===== CDN 加速（国内访问优化）=====
 # 主题默认第三方库走 jsdelivr，国内不稳定，改为七牛 staticfile CDN
 CDN:
@@ -25,8 +33,7 @@ post_copyright:
 aside:
   card_author:
     enable: true
-    # 头像：把图片放进 source/img/ 后填 /img/xxx.jpg；留空则用主题默认蝴蝶图标
-    # avatar: /img/avatar.jpg
+    # 头像在文件顶部的 avatar.img 统一配置
     description: CJJ的个人博客，分享技术分析和生活记录
     button:
       enable: true
