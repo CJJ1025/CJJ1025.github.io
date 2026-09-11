@@ -6,3 +6,6 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
+
+# 本地目录联接（指向 node_modules/hexo-theme-butterfly，仅供编辑器快速打开，勿提交）
+butterfly-theme/
