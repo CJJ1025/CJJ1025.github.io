@@ -16,6 +16,11 @@ CDN:
 search:
   use: local_search
 
+# ===== 文章页设置 | Post page =====
+# 关闭每篇文章底部的版权声明卡片（文章作者/链接/版权声明）
+post_copyright:
+  enable: false
+
 # ===== 侧边栏 | Sidebar =====
 aside:
   card_author:
