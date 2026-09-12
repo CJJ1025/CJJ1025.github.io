@@ -8,7 +8,7 @@ avatar:
   effect: false
 
 # 首页顶部横幅（#page-header 背景），随机二次元图 API，每次刷新换一张
-index_img: https://www.loliapi.com/acg/
+index_img: https://t.alcy.cc/fj
 
 # ===== CDN 加速（国内访问优化）=====
 # 主题默认第三方库走 jsdelivr，国内不稳定，改为七牛 staticfile CDN
@@ -40,3 +40,26 @@ aside:
       icon: fab fa-github
       text: Follow Me
       link: https://github.com/CJJ1025 # 你的 GitHub 主页
+  # 关闭侧边栏公告卡片
+  card_announcement:
+    enable: false
+
+# ===== 自定义注入 | Inject =====
+inject:
+  head:
+    # 隐藏首页全屏横幅中央的站点大标题（只作用于首页 full_page，文章页标题保留）
+    # 注意：值必须加引号，否则 CSS 选择器里 " #" 会被 YAML 当成注释截断
+    - '<style>#page-header.full_page #site-info{display:none}</style>'
+    # 首页文章封面：完整显示图片、等比缩放不裁剪（contain）；想恢复默认填满裁剪改成 cover 即可
+    - '<style>.recent-post-item img.post-bg{object-fit:contain}</style>'
+
+# ===== 背景特效 | Background effects =====
+# 彩色丝带 | canvas_ribbon
+# See: https://github.com/hustcc/ribbon.js
+canvas_ribbon:
+  enable: false
+  size: 150        # 丝带大小 | Ribbon size
+  alpha: 0.6       # 透明度 0~1 | Opacity (0 ~ 1)
+  zIndex: -1
+  click_to_change: false  # 点击换色 | Click to change color
+  mobile: true     # 手机端启用 | Enable on mobile

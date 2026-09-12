@@ -5,6 +5,7 @@ tags:
   - 随笔
 categories:
   - 日常
+cover: https://img.imgdd.com/518a7442-a013-4750-8eaa-aef575dc83e3.png
 ---
 
 欢迎来到我的博客。
