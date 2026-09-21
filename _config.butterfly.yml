@@ -50,8 +50,9 @@ inject:
     # 隐藏首页全屏横幅中央的站点大标题（只作用于首页 full_page，文章页标题保留）
     # 注意：值必须加引号，否则 CSS 选择器里 " #" 会被 YAML 当成注释截断
     - '<style>#page-header.full_page #site-info{display:none}</style>'
-    # 首页文章封面：完整显示图片、等比缩放不裁剪（contain）；想恢复默认填满裁剪改成 cover 即可
-    - '<style>.recent-post-item img.post-bg{object-fit:contain}</style>'
+    # 首页文章封面：完整显示图片、等比缩放不裁剪（contain），加 !important 覆盖主题默认的 cover
+    # 想恢复默认填满裁剪把 contain 改成 cover，或删掉这行
+    - '<style>.recent-post-item img.post-bg{object-fit:contain!important}.recent-post-item:hover img.post-bg{transform:scale(1.08)}</style>'
 
 # ===== 背景特效 | Background effects =====
 # 彩色丝带 | canvas_ribbon
