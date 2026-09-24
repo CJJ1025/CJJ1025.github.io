@@ -29,6 +29,17 @@ search:
 post_copyright:
   enable: false
 
+# ===== Mermaid 图表 =====
+# 用 {% mermaid %} ... {% endmermaid %} 标签书写流程图/时序图
+# 注意：不要用 ```mermaid 代码块——主题的代码块自动转换要求渲染器输出
+# <pre><code class="mermaid">，而 hexo 默认 highlight 输出的是表格结构，匹配不上会显示成纯文本
+mermaid:
+  enable: true
+  code_write: true          # true = 图表由 {% mermaid %} 标签生成（保持 true）
+  theme:
+    light: default          # 浅色主题：default / forest / neutral
+    dark: dark              # 深色主题
+
 # ===== 侧边栏 | Sidebar =====
 aside:
   card_author:
