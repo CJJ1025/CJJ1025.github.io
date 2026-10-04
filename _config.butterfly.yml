@@ -40,6 +40,15 @@ mermaid:
     light: default          # 浅色主题：default / forest / neutral
     dark: dark              # 深色主题
 
+# ===== 系列 / 专栏 =====
+# 启用 Butterfly 系列的「侧边栏系列卡片」需要这个顶层 enable = true
+# 文章里 front-matter 加 series: 系列名 即可自动归类
+series:
+  enable: true
+  orderBy: date             # 按发布日期排序（也可用 title 按标题排）
+  order: 1                  # 1 升序（旧→新），-1 降序
+  number: false             # 数字编号
+
 # ===== 侧边栏 | Sidebar =====
 aside:
   card_author:
@@ -54,6 +63,10 @@ aside:
   # 关闭侧边栏公告卡片
   card_announcement:
     enable: false
+  # 开启系列卡片（需要文章 front-matter 中带 `series:` 字段）
+  card_post_series:
+    enable: true
+    series_title: 系列文章
 
 # ===== 自定义注入 | Inject =====
 inject:
