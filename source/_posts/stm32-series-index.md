@@ -22,10 +22,10 @@ series: STM32 入门笔记
 
 | 篇号 | 标题 | 关键内容 | 链接 |
 | --- | --- | --- | --- |
-| **01** | 从点亮一颗 LED 到能看懂固件库 | GPIO 的 8 种模式、`SetBits` / `ResetBits` 方向、流水灯、`Set/Reset` 与高低电平对应关系、stdint ↔ STM32 别名 | [stm32-01-dian-liang-led-yu-gpio](stm32-01-dian-liang-led-yu-gpio) |
-| **02** | OLED 显示屏与硬件接线注意 | 有机发光二极管原理、4 针 / 7 针 OLED 引脚定义、杜邦线长度对显示的影响 | [stm32-02-oled](stm32-02-oled) |
-| **03** | EXTI 外部中断：原理 + 对射式红外计次 | NVIC 中断优先级分组、EXTI 5 步配置、对射式红外传感器计次完整工程 | [stm32-03-exti-wai-bu-zhong-duan](stm32-03-exti-wai-bu-zhong-duan) |
-| **04** | 旋转编码器与双 EXTI 中断 | 双 EXTI 配置、A/B 相位判定、Encoder 模块封装、常见 bug 与消抖 | [stm32-04-xuan-zhuan-bian-ma-qi](stm32-04-xuan-zhuan-bian-ma-qi) |
+| **01** | 从点亮一颗 LED 到能看懂固件库 | GPIO 的 8 种模式、`SetBits` / `ResetBits` 方向、流水灯、`Set/Reset` 与高低电平对应关系、stdint ↔ STM32 别名 | {% post_link stm32-01-gpio-led "01 从点亮一颗 LED 到能看懂固件库" %} |
+| **02** | OLED 显示屏与硬件接线注意 | 有机发光二极管原理、4 针 / 7 针 OLED 引脚定义、杜邦线长度对显示的影响 | {% post_link stm32-02-oled "02 OLED 显示屏与硬件接线注意" %} |
+| **03** | EXTI 外部中断：原理 + 对射式红外计次 | NVIC 中断优先级分组、EXTI 5 步配置、对射式红外传感器计次完整工程 | {% post_link stm32-03-exti-interrupt "03 EXTI 外部中断：原理 + 对射式红外计次" %} |
+| **04** | 旋转编码器与双 EXTI 中断 | 双 EXTI 配置、A/B 相位判定、Encoder 模块封装、常见 bug 与消抖 | {% post_link stm32-04-rotary-encoder "04 旋转编码器与双 EXTI 中断" %} |
 
 > 链接用的是相对地址（hexo 的 `relative_link: false`，但浏览器访问 `/2026/09/27/stm32-01-...` 时同目录可以相互跳转）。
 

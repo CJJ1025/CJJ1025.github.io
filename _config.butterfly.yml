@@ -2,6 +2,18 @@
 # 完整配置项见：node_modules/hexo-theme-butterfly/_config.yml
 # 官方文档：https://butterfly.js.org/
 
+# ===== 顶部导航栏 | Navigation menu =====
+# 格式：显示文字: 路径 || 图标（Font Awesome）
+# 路径里如果出现中文需要写带 slug 的形式，比如 /2026/09/27/stm32-zhuan-lan-suo-yin/
+# 也可以用 url_for 友好的相对路径：{% post_link slug "显示文字" %} 不支持 menu，menu 写绝对路径
+menu:
+  首页: / || fas fa-home
+  STM32专栏: /2026/09/27/stm32-series-index/ || fas fa-microchip
+  算法题: /categories/算法学习/ || fas fa-code
+  C++: /categories/C-学习/ || fas fa-cogs
+  嵌入式: /categories/嵌入式学习/ || fas fa-microchip
+  关于我: /about/ || fas fa-user
+
 # ===== 头像与顶部横幅 | Avatar & Banner =====
 avatar:
   img: /img/avatar.jpg
