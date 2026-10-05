@@ -26,9 +26,13 @@ index_img: https://t.alcy.cc/fj
 # 主题默认第三方库走 jsdelivr，国内不稳定，改为七牛 staticfile CDN
 CDN:
   internal_provider: local
-  third_party_provider: custom
+  # 2026-09-27 改回 jsdelivr：staticfile 没收录 KaTeX 0.18.1 字体，KaTeX 公式会因
+  # 字体 404 而显示成乱码。jsdelivr 默认带 access-control-allow-origin: *
+  # 头，且 KaTeX 字体完整可用（其它不影响使用的资源继续用 staticfile）
+  # 如需全部走 staticfile，把 katex 版本固定到 0.16.x（之前 staticfile 收录过）
+  # 或把 KaTeX 资源本地化到 source/pluginsSrc/
+  third_party_provider: jsdelivr
   version: true
-  custom_format: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
 
 # ===== 本地搜索 =====
 # 依赖 hexo-generator-search（已安装），搜索索引在构建时生成为 /search.xml
