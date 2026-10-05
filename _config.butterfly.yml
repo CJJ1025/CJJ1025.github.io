@@ -52,6 +52,20 @@ mermaid:
     light: default          # 浅色主题：default / forest / neutral
     dark: dark              # 深色主题
 
+# ===== KaTeX 数学公式 =====
+# 用 $...$ 行内公式、$$...$$ 块公式
+# 配合 hexo-renderer-kramed 插件（已装）：npm install hexo-renderer-kramed --save
+# kramed 会把 $...$ 转成 <span class="math math-inline">...</span>，下面两段 CDN 让 KaTeX 在浏览器里渲染
+# Butterfly 5.x 的 math 顶层配置（注意不是 katex:）
+math:
+  use: katex                 # 可选 katex / mathjax；这里用 KaTeX（轻、快）
+  per_page: true             # 全站启用（设为 false 时，需要在文章的 front-matter 里加 math: true 才加载）
+  hide_scrollbar: false
+  katex:
+    copy_tex: false          # 公式右键复制功能
+  # CDN 走 jsdelivr（fast_get 等你访问页面时临时加载，不进 hexo 构建产物）
+  # 也可以用 CDN 配置里的 staticfile：https://cdn.staticfile.org/katex/...
+
 # ===== 系列 / 专栏 =====
 # 启用 Butterfly 系列的「侧边栏系列卡片」需要这个顶层 enable = true
 # 文章里 front-matter 加 series: 系列名 即可自动归类

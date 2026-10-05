@@ -36,6 +36,14 @@ skip_render: # 跳过渲染的路径（原样复制到 public）| Paths to skip 
 new_post_name: :title.md # 新文章的文件名格式 | File name format of new posts
 default_layout: post # 默认布局 | Default layout
 titlecase: false # 标题自动转为首字母大写（英文）| Transform title into titlecase
+# 关闭 hexo 默认 markdown 渲染器（marked），改用 kramed，支持 KaTeX 数学公式
+marked: false
+kramed:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  smartLists: true
+  smartypants: false
 external_link:
   enable: true # 在新标签页打开外部链接 | Open external links in new tab
   field: site # 应用范围：site 全站 / post 仅文章 | Apply to the whole site or posts only
