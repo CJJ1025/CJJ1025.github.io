@@ -288,7 +288,7 @@ void wrapper(T&& arg) {
 
 ## 九、值类别关系图
 
-```mermaid
+{% mermaid %}
 venn
     title C++11 值类别集合关系 (Value Categories)
     A["glvalue<br/>广义左值"]
@@ -296,7 +296,7 @@ venn
     A and B["xvalue<br/>将亡值"]
     A not B["lvalue<br/>左值"]
     B not A["prvalue<br/>纯右值"]
-```
+{% endmermaid %}
 
 ## 十、小结
 

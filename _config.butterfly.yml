@@ -46,11 +46,12 @@ post_copyright:
   enable: false
 
 # ===== Mermaid 图表 =====
-# 已安装 hexo-filter-mermaid-diagrams 插件，```mermaid 代码块会自动渲染
-# 主题内置的 mermaid 关掉，避免双重渲染
+# 用 ```mermaid 代码块直接写。
+# code_write: true 时，Butterfly 会把代码块转成 <pre class="mermaid-src"> 放在 .mermaid-wrap 里，
+# 然后前端 mermaid.js 自动渲染。开启就能用，不需要任何额外插件。
 mermaid:
-  enable: false             # 关掉主题内置的；让 hexo-filter-mermaid-diagrams 接管
-  code_write: false
+  enable: true
+  code_write: true
   theme:
     light: default
     dark: dark
