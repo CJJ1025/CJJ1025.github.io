@@ -1,5 +1,5 @@
 ---
-title: C++ 右值引用与移动语义：把"昂贵的拷贝"换成"廉价的搬运"
+title: C++ 右值引用与移动语义
 date: 2026-10-12 22:20:00
 tags:
   - C++
@@ -13,6 +13,18 @@ categories:
 > 核心解决的痛点：**大对象拷贝时产生昂贵的深拷贝开销，浪费内存、时间**。例如 `vector<string>`、自定义的大数组对象，拷贝会复制全部数据；移动语义可以直接"偷走"资源，不复制数据。
 
 ## 一、左值、右值
+
+{% mermaid %}
+venn
+    A(glvalue):::yellow
+    B(rvalue):::green
+    A only A: lvalue
+    A intersect B: xvalue
+    B only B: prvalue
+
+    classDef yellow fill:#f2d249,stroke:#cc9900
+    classDef green fill:#309955,stroke:#106633
+{% endmermaid %}
 
 ### 左值（lvalue）
 
