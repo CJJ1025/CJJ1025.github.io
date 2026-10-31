@@ -33,6 +33,11 @@ CDN:
   # 或把 KaTeX 资源本地化到 source/pluginsSrc/
   third_party_provider: jsdelivr
   version: true
+  # busuanzi 统计脚本改由本地加载器在 window.load 之后动态加载：
+  # 主题默认把它作为 async 脚本放在页面里，一旦 busuanzi.ibruce.info 卡住（国内常见），
+  # window.load 就一直不触发，浏览器标签页一直转圈，搜索等依赖 load 的功能也不会初始化。
+  option:
+    busuanzi: /js/busuanzi-loader.js
 
 # ===== 本地搜索 =====
 # 依赖 hexo-generator-search（已安装），搜索索引在构建时生成为 /search.xml
